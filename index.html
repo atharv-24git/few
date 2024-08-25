@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legend</title>
+    <link rel="stylesheet" href="styles-bor.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles-main.css"> <!-- Link to your CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<style>
+
+
+/* General Styling for All Pages */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #FFFFFF;
+}
+
+header {
+    background: #6c63ff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Premium Styling for Library Section */
+.section {
+    background: #FFFFFF; /* Soft gradient background */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.section h2 {
+    font-size: 2.2em; /* Slightly smaller header */
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Add spacing for a premium look */
+    border-bottom: 3px solid #6c63ff; /* Underline header with a bold color */
+    padding-bottom: 10px;
+}
+
+.card {
+    background: white;
+    padding: 20px; /* Reduced padding for a more compact card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-left-color: #5a5a5a; /* Change border color on hover */
+}
+
+.card h3 {
+    font-size: 1.6em; /* Slightly smaller heading */
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Pacifico', cursive; /* Beautiful font */
+}
+
+.card p {
+    font-size: 1em; /* Adjusted text size for better readability */
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Highlighted text and sections */
+.card h3 {
+    color: #6c63ff; /* Highlight heading with a premium color */
+}
+
+.card p {
+    background: #f0f4f7; /* Light background for text */
+    border-left: 3px solid #6c63ff; /* Add colored left border for text */
+    padding: 10px; /* Add padding for better readability */
+    border-radius: 4px; /* Rounded corners for a soft look */
+}
+
+
+
+        /* Additional CSS for Read More functionality */
+        .more-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            color: #6c63ff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .read-less {
+            display: none; /* Initially hidden */
+            color: #6c63ff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .read-less:hover {
+            text-decoration: underline;
+        }
+     
+        /* Additional CSS for Read More functionality */
+        .more-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .card {
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background-color: #ffffff; /* Optional: for hover effect */
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .header {
+            background-color: #FFFFFF;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 0px solid #ddd;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 1.7em;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+
+            font-size: 1.6em;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #6c63ff;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            overflow-y: auto;
+            transition: left 0.3s ease;
+            z-index: 1000;
+            display: none;
+        }
+
+        .sidebar.active {
+            left: 0;
+            display: block;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #ddd;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 0px;
+            margin-top: 0px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .card p {
+            margin: 0;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .zoology-legend {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+.profile-container {
+    max-width: 700px;
+    margin: 5px auto;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    margin-right: 15px;
+    border: 2px solid #6c63ff; /* Optional: Add a border around the profile picture */
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h1 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.bio {
+    padding: 8px;
+    background-color: #fff7e6; /* Light yellow background for bio */
+    border: 1px solid #ffebcc;
+    border-radius: 8px;
+    font-style: italic; /* Italicize text for emphasis */
+    margin-top: 15px; /* Space between profile-header and bio */
+}
+
+.bio::before {
+    content: "“"; /* Decorative quotes for a quote-like appearance */
+    font-size: 2em;
+    color: #ffcc00; /* Gold color for the quote mark */
+}
+
+.bio::after {
+    content: "”";
+    font-size: 2em;
+    color: #ffcc00;
+}
+
+.profile-skills {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e9f5ff; /* Light blue background to highlight */
+    border: 1px solid #cce4ff;
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflow for smooth transition */
+    max-height: 20px; /* Set an initial max-height to collapse */
+    transition: max-height 0.5s ease-out; /* Smooth transition for expand/collapse */
+}
+
+.profile-skills.expanded {
+    max-height: 500px; /* Increase max-height when expanded */
+}
+
+.profile-skills h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #0056b3; /* Darker blue color for the heading */
+    cursor: pointer; /* Indicate clickable area */
+}
+
+.profile-skills li {
+    background: #d0e9ff; /* Lighter blue for list items */
+    border: 4px solid; /* Adjusted border width for visibility */
+    border-image: linear-gradient(45deg, #004080 25%, transparent 25%, transparent 50%, #004080 50%, #004080 75%, transparent 75%, transparent) 5; /* Banded border with dark navy color */
+    padding: 8px 12px;
+    color: #333333; /* Darker text color for a premium feel */
+    font-size: 1.1em; /* Slightly increased font size */
+    font-family: 'Pacifico', cursive; /* Apply Pacifico font */
+    font-weight: ; /* Make the text bold */
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Smooth background color, text color, and size changes */
+}
+
+.profile-skills li:hover {
+    background-color: #b0d6ff; /* Slightly darker blue on hover */
+    color: #000080; /* Dark navy text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+
+.contact-info {
+    margin-top: 20px;
+    background-color: #FCFCFC; /* Optional: Background color for the contact info section */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.contact-info h2 {
+    font-size: 1.4em;
+    color: #333;
+    font-family: 'Arial', sans-serif; /* Change to your preferred font */
+    margin-bottom: 15px;
+}
+
+.contact-item {
+    font-size: 1em;
+    color: #555;
+    font-family: 'Courier New', monospace; /* Change to your preferred font */
+    margin: 5px 0;
+}
+
+.contact-item a {
+    color: #2E99FF;
+    text-decoration: none;
+    font-weight: bold; /* Optional: Make links bold */
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: #004080; /* Optional: Change color on hover */
+}
+
+        @media (min-width: 768px) {
+            .sidebar {
+                display: block;
+                left: 0;
+            }
+
+            .content {
+                margin-left: 270px;
+            }
+        }
+.sharpe-font {
+    font-family: 'Sharpe', sans-serif; /* Use the Sharpe font */
+    font-size: 2em; /* Increase the font size */
+    color: #4a90e2; /* Change the color to a cool blue */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Increase spacing between letters for a modern look */
+    text-transform: uppercase; /* Convert text to uppercase */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and shadow */
+}
+.sharpe-font:hover {
+    color: #003366; /* Darken the color on hover */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Enhance the shadow effect on hover */
+}
+  /* Premium styling for the Library section */
+#library {
+    background: #FFFFFF; /* Soft gradient background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#library h2 {
+    font-size: 2.2em; /* Slightly smaller header */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Add spacing for a premium look */
+    border-bottom: 3px solid #6c63ff; /* Underline header with a bold color */
+    padding-bottom: 10px;
+}
+
+#library .card {
+    background: white;
+    padding: 20px; /* Reduced padding for a more compact card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
+}
+
+#library .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-left-color: #5a5a5a; /* Change border color on hover */
+}
+
+#library .card h3 {
+    font-size: 1.6em; /* Slightly smaller heading */
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Pacifico', cursive; /* Beautiful font */
+}
+
+#library .card p {
+    font-size: 1em; /* Adjusted text size for better readability */
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Highlighted text and sections */
+#library .card h3 {
+    color: #6c63ff; /* Highlight heading with a premium color */
+}
+
+#library .card p {
+    background: #f0f4f7; /* Light background for text */
+    border-left: 3px solid #6c63ff; /* Add colored left border for text */
+    padding: 10px; /* Add padding for better readability */
+    border-radius: 4px; /* Rounded corners for a soft look */
+}
+
+
+
+
+/* Premium styling for the LifeRelief section */
+#lifeRelief {
+    background: #FFFFFF; /* Soft gradient background */
+    padding: 20px; /* Reduced padding for better spacing on mobile */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#lifeRelief h2 {
+    font-size: 2.2em; /* Slightly smaller header */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Add spacing for a premium look */
+    border-bottom: 3px solid #6c63ff; /* Underline header with a bold color */
+    padding-bottom: 10px;
+}
+
+#lifeRelief .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
+    width: 100%; /* Make card take full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#lifeRelief .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-left-color: #5a5a5a; /* Change border color on hover */
+}
+
+#lifeRelief .card h3 {
+    font-size: 1.6em; /* Slightly smaller heading */
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Pacifico', cursive; /* Beautiful font */
+}
+
+#lifeRelief .card p {
+    font-size: 1em; /* Adjusted text size for better readability */
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Highlighted text */
+.highlight {
+    background-color: #ffff00; /* Yellow highlight */
+    font-weight: bold;
+}
+
+/* Text with border */
+.bordered {
+    border: 2px solid #333; /* Dark border */
+    padding: 2px;
+    border-radius: 4px; /* Optional rounded corners */
+}
+
+/* Bold text */
+.bold {
+    font-weight: bold; /* Bold text */
+}
+
+/* Bullet list */
+.bullet-list {
+    list-style-type: disc; /* Bulleted list */
+    padding-left: 20px; /* Indentation for bullets */
+}
+
+.bullet-list li {
+    margin-bottom: 5px; /* Space between items */
+}
+
+/* Highlighted text and sections in cards */
+#lifeRelief .card h3 {
+    color: #6c63ff; /* Highlight heading with a premium color */
+}
+
+#lifeRelief .card p {
+    background: #f0f4f7; /* Light background for text */
+    border-left: 3px solid #6c63ff; /* Add colored left border for text */
+    padding: 10px; /* Add padding for better readability */
+    border-radius: 4px; /* Rounded corners for a soft look */
+}
+
+
+</style>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="book-collection.html">Book Collection</a>
+            <a href="research-papers.html">Research Papers</a>
+            <a href="online-resources.html">Online Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="online-resources" class="section">
+            <h2>Online Resources</h2>
+            <div class="card" onclick="toggleContent(this)">
+                <h3>Resource Title 1</h3>
+                <p>Description of Resource 1. Add more details about the resource here.</p>
+                <div class="more-content">
+                    <p>Full details about Resource Title 1. This content will be shown when "Read More" is clicked.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleContent(this)">
+                <h3>Resource Title 2</h3>
+                <p>Description of Resource 2. Add more details about the resource here.</p>
+                <div class="more-content">
+                    <p>Full details about Resource Title 2. This content will be shown when "Read More" is clicked.</p>
+                </div>
+            </div>
+            <!-- Add more online resources as needed -->
+        </section>
+    </main>
+
+    <div class="header">
+        <h2>Perfect With Kofi</h2>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#" class="sidebar-link active" data-section="allContents">Home</a>
+        <a href="#" class="sidebar-link" data-section="lifeRelief">lifeRelief</a>
+        <a href="#" class="sidebar-link" data-section="library">Library</a>
+        <a href="#" class="sidebar-link" data-section="batches">Batches</a>
+        <a href="#" class="sidebar-link" data-section="testSeries">Test Series</a>
+        <a href="#" class="sidebar-link" data-section="scholarship">Scholarship</a>
+        <a href="#" class="sidebar-link" data-section="contact">Contact Us</a>
+    </div>
+
+    <div class="content">
+        <div id="allContents" class="section zoology-legend">
+            <!-- Profile and Contact Info in the Home Section -->
+            <div class="profile-container">
+                <div class="profile-header">
+                    <img src="Image/profile-picture1.jpg" alt="Profile Picture">
+                    <div class="profile-details">
+                        <h1 class="sharpe-font">Atharv Roy</h1>
+                        <h2 class="starlight-font">Student</h2>
+                    </div>
+                </div>
+                <p class="bio">Your limitations don't define you, they actually do.</p>
+                <div class="profile-skills">
+                    <h3>Skills & Expertise</h3>
+                    <ul>
+                        <li>Sleeping</li>
+                        <li>Talking</li>
+                        <li>Android User🤟🏻</li>
+                    </ul>
+                </div>
+            </div>
+            <h2>  </h2>
+            <div class="card">
+                <h3 onclick="toggleContent(this)">All Contents</h3>
+                <p class="hidden">All Pictures | All Exercises | All</p>
+            </div>
+
+
+            <div class="card">
+                <h3 onclick="toggleContent(this)">Pictures</h3>
+                <p class="hidden">11 Photos |  Exercises |  Notes</p>
+            </div>
+   
+
+            <div class="card">
+                <h3 onclick="toggleContent(this)">Mind Maps </h3>
+                <p class="hidden">17 Photos |  Exercises |  Notes</p>
+            </div>
+            <div class="card">
+                <h3 onclick="toggleContent(this)">Discussion</h3>
+                <p class="hidden">19 Photos |  Exercises |  Notes</p>
+            </div>
+
+            <div class="contact-info">
+                <h2 id="contactInfoHeader">Contact Information</h2>
+                <div class="contact-info-details hidden">
+                    <p class="contact-item">Email: <a href="mailto:atharvava@proton.me">atharv@me</a></p>
+                    <p class="contact-item">Instagram: <a href="https://www.instagram.com/___atharv_ava_" target="_blank">___atharv_ava_</a></p>
+                    <p class="contact-item">Telegram: <a href="https://t.me/Atharv_siddhu" target="_blank">t.me/atharv</a></p>
+                    <p class="contact-item">Twitter: <a href="https://x.com/atharvrou?s=09" target="_blank">x-atharv</a></p>
+                    <p class="contact-item">Deltalab: <a href="https://i.delta.chat/#BA90635952B508991538ED1B995BEA215064BF6F&a=68c7ktcts%40nine.testrun.org&n=Atharv&i=4s2yQTisHMi&s=e3p7IJVsUP2" target="_blank">atharv's chat</a></p>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- LifeRelief Section -->
+<div id="lifeRelief" class="section hidden">
+    <h2>LifeRelief</h2>
+    <div class="card" onclick="window.location.href='book-Collection.html'">
+        <h3>Book Collection</h3>
+        <p>
+            Embark on an <span class="highlight">extraordinary journey</span> through our <span class="bold">unlimited library</span>, where every book unlocks new realms of knowledge. Perfect for
+            <span class="highlight">deep intellectual adventures</span> or <span class="bold">transformative leisure reading</span>.
+        </p>
+    </div>
+<div class="card" onclick="window.location.href='research-Papers.html'">
+    <h3>Research Papers</h3>
+    <p>
+        Explore a <span class="bold">frontline archive</span> of <span class="bordered">groundbreaking research</span> and transformative studies. Immerse yourself in the latest
+        <span class="highlight">scientific revelations</span> and <span class="bold">innovative theories</span> that are shaping the future.
+    </p>
+</div>
+    <div class="card" onclick="window.location.href='online-Resources.html'">
+        <h3>Online Resources</h3>
+        <p>
+            Unearth <span class="highlight">exceptional digital treasures</span>, from <span class="bold">groundbreaking e-books</span> and scholarly journals to 
+            <span class="bold">advanced educational platforms</span> that will elevate your <span class="bordered">intellectual exploration</span>.
+        </p>
+    </div>
+</div>
+
+
+
+
+<!-- Library Section -->
+<div id="library" class="section hidden">
+    <h2>Library</h2>
+    <div class="card" onclick="navigateToPage('book-Collection.html')">
+        <h3>Book Collection</h3>
+        <p>Discover an extensive range of books from various genres. Ideal for deep dives into any subject matter or casual reading.</p>
+    </div>
+    <div class="card" onclick="navigateToPage('research-Papers.html')">
+        <h3>Research Papers</h3>
+        <p>Access a comprehensive collection of academic papers and research articles to stay informed about the latest discoveries and innovations.</p>
+    </div>
+    <div class="card" onclick="navigateToPage('online-Resources.html')">
+        <h3>Online Resources</h3>
+        <p>Explore curated online resources including e-books, journals, and educational platforms to enhance your learning experience.</p>
+    </div>
+</div>
+
+
+        <!-- Batches Section -->
+        <div id="batches" class="section hidden">
+            <h2>Batches</h2>
+            <div id="password-container">
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <button onclick="checkPassword()">Submit</button>
+                <p id="password-message" style="color: red;"></p>
+            </div>
+            <div id="batches-content" class="hidden">
+                <!-- Add new batch details here -->
+            </div>
+        </div>
+
+        <!-- Test Series Section -->
+        <div id="testSeries" class="section hidden">
+            <h2>Test Series</h2>
+            <div id="testSeries-password-container">
+                <label for="testSeries-password">Enter Password:</label>
+                <input type="password" id="testSeries-password" placeholder="Enter password">
+                <button onclick="checkTestSeriesPassword()">Submit</button>
+                <p id="testSeries-password-message" style="color: red;"></p>
+            </div>
+            <div id="testSeries-content" class="hidden">
+                <!-- Add new test series details here -->
+            </div>
+        </div>
+
+        <!-- Scholarship Section -->
+        <div id="scholarship" class="section hidden">
+            <h2>Scholarship</h2>
+            <div id="scholarship-password-container">
+                <label for="scholarship-password">Enter Password:</label>
+                <input type="password" id="scholarship-password" placeholder="Enter password">
+                <button onclick="checkScholarshipPassword()">Submit</button>
+                <p id="scholarship-password-message" style="color: red;"></p>
+            </div>
+            <div id="scholarship-content" class="hidden">
+                <!-- Add new scholarship information here -->
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div id="contact" class="section hidden">
+            <h2>Contact Us</h2>
+            <div id="contact-password-container">
+                <label for="contact-password">Enter Password:</label>
+                <input type="password" id="contact-password" placeholder="Enter password">
+                <button onclick="checkContactPassword()">Submit</button>
+                <p id="contact-password-message" style="color: red;"></p>
+            </div>
+            <div id="contact-content" class="hidden">
+                <!-- Add new contact details or form here -->
+            </div>
+        </div>
+    </div>
+
+
+<script>
+        function toggleContent(card) {
+            const moreContent = card.querySelector('.more-content');
+
+            if (moreContent.style.display === "block") {
+                moreContent.style.display = "none";
+            } else {
+                moreContent.style.display = "block";
+            }
+        }
+    
+
+
+ 
+
+
+
+
+       function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        const links = document.querySelectorAll('.sidebar-link');
+        const sections = document.querySelectorAll('.section');
+
+        function showSection(sectionId) {
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        showSection('allContents');
+
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+                if (window.innerWidth < 768) {
+                    toggleSidebar(); // Close the sidebar on mobile after navigating
+                }
+            });
+        });
+
+        function toggleContent(element) {
+            var content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        document.getElementById('contactInfoHeader').addEventListener('click', function () {
+            var details = document.querySelector('.contact-info-details');
+            details.classList.toggle('hidden');
+        });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const skillsHeader = document.querySelector('.profile-skills h3');
+    const skillsSection = document.querySelector('.profile-skills');
+
+    skillsHeader.addEventListener('click', () => {
+        if (skillsSection.classList.contains('expanded')) {
+            skillsSection.classList.remove('expanded');
+        } else {
+            skillsSection.classList.add('expanded');
+        }
+    });
+
+    // Optionally, you can collapse the section if you click elsewhere on the page
+    document.addEventListener('click', (event) => {
+        if (!skillsSection.contains(event.target) && !skillsHeader.contains(event.target)) {
+            skillsSection.classList.remove('expanded');
+        }
+    });
+});
+function checkPassword() {
+    const enteredPassword = document.getElementById('password').value;
+    const correctPassword = '8509515bhaskar'; // Set your password here
+    const messageElement = document.getElementById('password-message');
+    const passwordContainer = document.getElementById('password-container');
+
+    if (enteredPassword === correctPassword) {
+        passwordContainer.classList.add('hidden');
+        window.location.href = 'batches.html'; // Redirect to the desired page
+    } else {
+        messageElement.textContent = 'Incorrect password, please try again.';
+    }
+}
+
+function checkTestSeriesPassword() {
+    const enteredPassword = document.getElementById('testSeries-password').value;
+    const correctPassword = '801693bhaskar'; // Updated password
+    const messageElement = document.getElementById('testSeries-password-message');
+    const passwordContainer = document.getElementById('testSeries-password-container');
+
+    if (enteredPassword === correctPassword) {
+        passwordContainer.classList.add('hidden');
+        window.location.href = 'testSeries.html'; // Redirect to the Test Series page
+    } else {
+        messageElement.textContent = 'Incorrect password, please try again.';
+    }
+}
+
+function checkScholarshipPassword() {
+    const enteredPassword = document.getElementById('scholarship-password').value;
+    const correctPassword = '993282bhaskar'; // Updated password
+    const messageElement = document.getElementById('scholarship-password-message');
+    const passwordContainer = document.getElementById('scholarship-password-container');
+
+    if (enteredPassword === correctPassword) {
+        passwordContainer.classList.add('hidden');
+        window.location.href = 'scholarship.html'; // Redirect to the Scholarship page
+    } else {
+        messageElement.textContent = 'Incorrect password, please try again.';
+    }
+}
+
+function checkContactPassword() {
+    const enteredPassword = document.getElementById('contact-password').value;
+    const correctPassword = '05052006'; // Updated password
+    const messageElement = document.getElementById('contact-password-message');
+    const passwordContainer = document.getElementById('contact-password-container');
+
+    if (enteredPassword === correctPassword) {
+        passwordContainer.classList.add('hidden');
+        window.location.href = 'contact.html'; // Redirect to the Contact Us page
+    } else {
+        messageElement.textContent = 'Incorrect password, please try again.';
+    }
+}
+
+
+
+    function navigateToPage(page) {
+        window.location.href = page;
+    }
+
+
+
+
+
+
+</script>
+
+
+
+
+    <script src="script-main.js"></script>
+
+</body>
+
+</html>
