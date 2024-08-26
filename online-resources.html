@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resources</title>
+    <link rel="stylesheet" href="styles-bor.css"> <!-- Link to your CSS file -->
+</head>
+<style>
+
+
+/* General Styling for All Pages */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #FFFFFF;
+}
+
+header {
+    background: #6c63ff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Premium Styling for Library Section */
+.section {
+    background: #FFFFFF; /* Soft gradient background */
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #8e44ad; /* Deep purple border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.section h2 {
+    font-size: 2.2em; /* Slightly smaller header */
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Add spacing for a premium look */
+    border-bottom: 3px solid #6c63ff; /* Underline header with a bold color */
+    padding-bottom: 10px;
+}
+
+.card {
+    background: white;
+    padding: 20px; /* Reduced padding for a more compact card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-left-color: red; /* Change border color on hover */
+}
+
+/* Card Heading Styling */
+.section .card h3 {
+    font-size: 1.6em; /* Slightly smaller heading */
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Serra', sans-serif; /* Serra font by default */
+}
+
+.card p {
+    font-size: 1em; /* Adjusted text size for better readability */
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Highlighted text and sections */
+.card h3 {
+    color: #6c63ff; /* Highlight heading with a premium color */
+}
+
+.card p {
+    background: #f0f4f7; /* Light background for text */
+    border-left: 3px solid #6c63ff; /* Add colored left border for text */
+    padding: 10px; /* Add padding for better readability */
+    border-radius: 4px; /* Rounded corners for a soft look */
+}
+
+
+
+        /* Additional CSS for Read More functionality */
+        .more-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            color: #6c63ff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .read-less {
+            display: none; /* Initially hidden */
+            color: #6c63ff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .read-less:hover {
+            text-decoration: underline;
+        }
+     
+        /* Additional CSS for Read More functionality */
+        .more-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .card {
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background-color: #ffffff; /* Optional: for hover effect */
+        }
+    
+
+</style>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="book-collection.html">Book Collection</a>
+            <a href="research-papers.html">Research Papers</a>
+            <a href="online-resources.html">Online Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="online-resources" class="section">
+
+            <div class="card" onclick="toggleContent(this)">
+                <h3>Resource Topic</h3>
+                <p>Description of Resource 1. Add more details about the resource here.</p>
+                <div class="more-content">
+                    <p>Full details about Resource Title 1. This content will be shown when "Read More" is clicked.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleContent(this)">
+                <h3>Resource Subtopic</h3>
+                <p>Description of Resource 2. Add more details about the resource here.</p>
+                <div class="more-content">
+                    <p>Full details about Resource Title 2. This content will be shown when "Read More" is clicked.</p>
+                </div>
+            </div>
+            <!-- Add more online resources as needed -->
+        </section>
+    </main>
+
+<script>
+        function toggleContent(card) {
+            const moreContent = card.querySelector('.more-content');
+
+            if (moreContent.style.display === "block") {
+                moreContent.style.display = "none";
+            } else {
+                moreContent.style.display = "block";
+            }
+        }
+    
+</script>
+</body>
+</html>
